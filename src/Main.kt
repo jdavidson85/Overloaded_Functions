@@ -1,23 +1,20 @@
-fun acceptCustomerInfo(customerType: String, vararg info: String) {
-    when (customerType) {
-        "residential" -> {
-            println("Residential Customer Information:")
-            println("Name: ${info[0]}")
-            println("Phone Number: ${info[1]}")
-        }
-        "business" -> {
-            println("Business Customer Information:")
-            println("Business Name: ${info[0]}")
-            println("Contact Name: ${info[1]}")
-            println("Phone Number: ${info[2]}")
-        }
-        else -> println("Invalid customer type.")
-    }
+fun acceptCustomerInfo(name: String, phoneNumber: String) {
+    println("Residential Customer Information:")
+    println("Name: $name")
+    println("Phone Number: $phoneNumber")
+}
+ 
+fun acceptCustomerInfo(businessName: String, contactName: String, phoneNumber: String) {
+    println("Business Customer Information:")
+    println("Business Name: $businessName")
+    println("Contact Name: $contactName")
+    println("Phone Number: $phoneNumber")
 }
 
 fun main() {
-
-    acceptCustomerInfo("residential", "Joe Davidson", "1234567890")
-
-    acceptCustomerInfo("business", "Dub Boyz Gaming", "Luke Davidson", "9876543210")
+    // Residential Info
+    acceptCustomerInfo("Luke Davidson", "098-765-4321")
+ 
+    // Business Info
+    acceptCustomerInfo("Dub Boyz Gaming.", "Joe Davidson", "123-456-7890")
 }
